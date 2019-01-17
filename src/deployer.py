@@ -55,7 +55,7 @@ def apply_exports(chart_path, environment):
 
 
 def install(chart_path, environment, dry_run=False):
-    helmfile.charts(environment, join(chart_path, 'helmfile.yaml'), helmArgs='--dry-run' if dry_run else None)
+    helmfile.charts(environment, join(chart_path, 'helmfile.yaml'), helmArgs='--dry-run' if dry_run else '--force')
 
 
 def delete(chart_path, environment):
